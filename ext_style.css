@@ -1,27 +1,41 @@
-h1{
-  color: red;
-  font-style: oblique;
-  font-size: 40;
-}
-
-body{
+.head-block{
   background-color: lightgrey;
-}
-
-b1{
-  color: blue;
-  font-size: 30;
-}
-
-it{
-  font-style: italic;
-}
-
-div{
-  background-color: black;
-  color: white;
-  font-size: 10;
+  margin: 10px;
+  padding: 5px;
+  width: 100%;
+  height: 20%;
+  border: solid black;
   text-align: center;
+}
+
+#head-block__title{
+  font-size: 40px;
   font-style: bold;
-  border: 5px dashed blue;
+}
+
+#head-block__subhead1{
+  font-size: 30px;
+  font-style: bold;
+}
+
+#head-block__subhead2{
+  font-style: oblique;
+  font-size: 20px;
+}
+
+.body-block{
+  background-color: cyan;
+  margin: 10px;
+  margin-top: 0px;
+}
+
+#body-block__heading{
+  font-size: 20px;
+  font-style: oblique;
+  text-align: left;
+}
+
+#body-block__content{
+  font-size: 15px;
+  text-align: justify;
 }
