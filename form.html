@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<meta name="description" content="Implementation of HTML forms">
+<head>
+  <title>HTML forms</title>
+  <style>
+    input{
+      margin-left: 30px;
+    }
+  </style>
+
+</head>
+<body>
+  <form action="#">
+    <label for="name1">Name goes here:</label>
+    <input type="text" id= "name1" name= "name1" value= "Name" onfocus="this.value= ''" required>
+    <br>
+    <label for="num1">Number goes here:</label>
+    <input type="tel" id= "num1" name= "numb1" size="5" maxlength="5">
+    <br>
+    <label for="num1">Pattern- 3 chars and 3 digits:</label>
+    <input type="text" id="pat1" name= "patt1" pattern="[a-z A-Z]{3}[0-9]{3}" required>
+    <hr>
+
+    <input type="radio"  id="rad1" name="rbuts" value="Rad1" required>
+    <label for="rad1">Radio 1</label><br>
+    <input type="radio" id="rad2" name="rbuts" value="Rad2">
+    <label for="rad2">Radio 2</label><br>
+    <input type="radio" id="rad3" name="rbuts" value="Rad3">
+    <label for="rad3">Radio 3</label><br>
+    <hr>
+
+    <input type="checkbox" id="chk1" name="phone" value="Honor" required>
+    <label for="chk1">Honor</label><br>
+    <input type="checkbox" id="chk2" name="phone" value="Mi">
+    <label for="chk2">Mi</label><br>
+    <input type="checkbox" id="chk3" name="phone" value="1+">
+    <label for="chk3">1+</label><br>
+    <hr>
+
+    <label for="date">Date:</label>
+    <input id="date1" type="date"><br>
+    <label for="mail">Mail:</label>
+    <input id="mail" type="email"><br>
+    <label for="col">Color:</label>
+    <input id="col" type="color"><br>
+    <label for="file">File:</label>
+    <input id="file" type="file"><br>
+    <label for="range1">60</label>
+    <input type="range" min="60" max="180" id="range1" name="numinrange">
+    <label for="range1">180</label><br>
+    <input type="url" name="ur1" value=".com">
+    <hr>
+    <input type="submit">
+  </form>
+</body>
+
+</html>
