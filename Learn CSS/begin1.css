@@ -158,3 +158,44 @@ body {
   position: webkit-sticky;
   top: 0;
 }
+
+.combinators {
+  padding-left: 20px;
+}
+
+/* child selector */
+.combinators > .Child1{
+  background-color: yellow;
+}
+
+/* decendant selector */
+.combinators  .Child3{
+  background-color: lightgreen;
+}
+
+.combinators > .Child3{
+  background-color: red;
+}
+
+/* Adjacent sibling slector */
+.Child1 + .Child2 {
+  border: solid cyan 2px;
+}
+
+.Child1 + .Child3 {
+  border: solid green 2px;
+}
+
+
+/* Sibling selector */
+.Child1 ~ .Child3 {
+  border: solid blue 2px;
+}
+
+.block {
+  height:250px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black 5px;
+}
