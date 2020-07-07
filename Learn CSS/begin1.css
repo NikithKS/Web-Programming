@@ -246,8 +246,31 @@ body {
   width: 98%;
   margin-right: auto;
   margin-left: auto;
+  padding: 20px;
+  padding-top: 0;
 }
 
-#name {
-  width: 97%;
+.form-body input {
+  margin-bottom: 15px;
+  display: block;
+}
+
+#name, #cou{
+  width: 96%;
+}
+
+#num:focus {
+  background: yellow;
+}
+
+#str:focus {
+  background: cyan;
+  color: #000;
+  width: 96%;
+  border-radius: 5px;
+}
+
+
+#cou:hover {
+  background-color: #008cba;
 }
