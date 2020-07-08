@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  margin-right:0.5%;
+  margin-left:0.5%;
+  background-color: white; !#70e57f;
+  height: 1800px;
+}
+
+.title-box {
+  background-color: #eeeeee;
+  color: black;
+  text-align: center;
+  border: 7px black;
+  border-style: double solid;
+}
+
+.title-box h2 {
+  padding: 0;
+  padding-top: 5px;
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+.title-box h5 {
+  text-align: right;
+  padding-bottom: 5px;
+}
+
+.title-box:hover {
+  border-color: #008cba;
+  background-color: white;
+}
+
+.header {
+  background-color: #171717;
+  color: white;
+  width: auto;
+  height: 30px;
+  margin: 1px;
+  overflow: hidden;
+  /* box-shadow: 0 0 5px 0 black; */
+}
+
+
+.header ul {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #171717;
+}
+
+.header li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+.header li:last-child {
+  border-right: none;
+}
+
+.header a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 5px 20px;
+  margin: 0;
+}
+
+.drop-head, .drop-body {
+  text-align: center;
+  text-decoration: none;
+  padding: 5px 20px;
+  margin: 0;
+}
+
+.drop-head {
+  display: none;
+  background-color: #171717;
+  color:white;
+  width: 100%;
+  position: relative;
+}
+
+
+.drop-body {
+  list-style-type: none;
+  display: none;
+  background-color: #171717;
+  position: absolute;
+  bottom: auto;
+  right: 0;
+}
+
+
+.drop-body a {
+  display: block;
+  border-top: 1px solid white;
+  margin: 0;
+}
+
+@media (min-width:800px) {
+
+  .title-box h2 {
+    font-size: 3em;
+  }
+
+  .header{
+    height: 45px;
+  }
+
+  .header a {
+    height: 45px;
+    font-size: 1.3em;
+    padding: 7.5px 20px;
+  }
+}
+
+@media (max-width:535px) {
+  .header {
+    overflow: visible;
+  }
+
+  .large-head {
+    display: none;
+  }
+
+  .drop-head {
+    display: block;
+  }
+}
+
+.dropdown:hover .drop-body{
+    display: block;
+}
+
+.drop-head:hover {
+  background-color: teal;
+}
+
+.drop-body a:hover {
+  background-color: #008cba;
+}
+
+.header li:hover {
+  background-color: #008cba;
+}
+
+.header .about {
+  float: right;
+}
+
+
+.combinators {
+  padding-left: 20px;
+}
+
+/* child selector */
+.combinators > .Child1{
+  background-color: yellow;
+}
+
+/* decendant selector */
+.combinators  .Child3{
+  background-color: lightgreen;
+}
+
+.combinators > .Child3{
+  background-color: red;
+}
+
+/* Adjacent sibling slector */
+.Child1 + .Child2 {
+  border: solid cyan 2px;
+}
+
+.Child1 + .Child3 {
+  border: solid green 2px;
+}
+
+
+/* Sibling selector */
+.Child1 ~ .Child3 {
+  border: solid blue 2px;
+}
+
+.positions {
+  /* position: relative; */
+}
+
+.block {
+  height:250px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black 5px;
+  position: relative;
+}
+
+.red-block, .blue-block{
+  height: 125px;
+  width: 30%;
+}
+
+.red-block {
+  background-color: red;
+  position:absolute;
+  top: 0;
+  /* bottom: 12px; */
+  right: 0;
+}
+
+.blue-block {
+  background-color: blue;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+
+.sticky-top {
+  position: sticky;
+  position: webkit-sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.low-op {
+  opacity: 0.7;
+  height: auto;
+  min-width: 200px;
+  max-width: 390px;
+  float:left;
+}
+
+.low-op:hover {
+  opacity: 1.0;
+  box-shadow: black 20px;
+}
+
+.form-body {
+  background-color: lightgray;
+  border: solid grey 5px;
+  border-radius: 5px;
+  width: 98%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.form-body input {
+  margin-bottom: 15px;
+  display: block;
+}
+
+#name, #cou{
+  width: 96%;
+}
+
+#num:focus {
+  background: yellow;
+}
+
+#str:focus {
+  background: cyan;
+  color: #000;
+  width: 96%;
+  border-radius: 5px;
+}
+
+
+#cou:hover {
+  background-color: #008cba;
+}
