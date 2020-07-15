@@ -16,6 +16,12 @@
         vertical-align: middle;
       }
 
+      .sml-block {
+        background-color: #00d580;
+        text-align: center;
+        height: 50px;
+      }
+
       .sides {
         margin-bottom: 10px;
         /* border: solid red 2px; */
@@ -49,12 +55,18 @@
         </div>
       </div>
       <div class="col-sm-9 col-xs-12 cols" style="margin-left:0px;">
-        <div class="">
+        <div class="sides">
           Main
           <p>Using a nested columns</p>
       </div>
       </div>
-
+    </div>
+    Bootstrap resposive site using visibility:
+    <div class="row">
+      <div class="col-sm-3 sml-block">Always visible</div>
+      <div class="col-sm-3 d-none d-sm-inline-block sml-block">All except x-small screen</div>
+      <div class="col-sm-3 d-none d-md-inline-block sml-block">Medium and large</div>
+      <div class="col-sm-3 d-none d-lg-inline-block sml-block">Only large</div>
     </div>
   </body>
 </html>
