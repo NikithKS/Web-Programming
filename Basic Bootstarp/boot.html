@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bootstrap n stuff</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/home/nikith/Desktop/Link to Web-Programming/bootstrap/css/bootstrap.min.css">
+    <style>
+      body{
+        background-color: #ddd;
+      }
+
+      .cols {
+        background-color: #00e570;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .sides {
+        margin-bottom: 10px;
+        /* border: solid red 2px; */
+      }
+
+
+      @media (max-width:768px){
+
+      }
+
+
+    </style>
+  </head>
+
+  <body class="container-fluid">
+    <div class="row">
+      <h2 class="col-md-6 offset-md-3 cols" style="height:50px;">Title..Using columns</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3 col-xs-12 " style="height:350px;">
+        <div class="row">
+          <div class="col-sm-12 cols sides" style="height:170px;">
+            <div>Side1</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 cols sides" style="height:170px;">
+            <div class="sides">Side2</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9 col-xs-12 cols" style="margin-left:0px;">
+        <div class="">
+          Main
+          <p>Using a nested columns</p>
+      </div>
+      </div>
+
+    </div>
+  </body>
+</html>
