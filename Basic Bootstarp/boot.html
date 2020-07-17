@@ -8,6 +8,11 @@
     <style>
       body{
         background-color: #ddd;
+        overflow-x: hidden;
+      }
+
+      .row {
+        margin-bottom: 10px;
       }
 
       .cols {
@@ -27,6 +32,16 @@
         /* border: solid red 2px; */
       }
 
+      .list-block {
+        width:20%;
+        margin: 0px;
+        background-color: #fdfd1e;
+        text-align: center;
+      }
+
+      table td{
+        border-right: solid black 1px;
+      }
 
       @media (max-width:768px){
 
@@ -40,11 +55,12 @@
     <div class="row">
       <h2 class="col-md-6 offset-md-3 cols" style="height:50px;">Title..Using columns</h2>
     </div>
-
+    <hr>
+    Nested columns
     <div class="row">
       <div class="col-sm-3 col-xs-12 " style="height:350px;">
         <div class="row">
-          <div class="col-sm-12 cols sides" style="height:170px;">
+          <div class="col-sm-12 cols sides" style="height:170px; margin-bottom: 0px;">
             <div>Side1</div>
           </div>
         </div>
@@ -54,13 +70,14 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-9 col-xs-12 cols" style="margin-left:0px;">
+      <div class="col-sm-9 col-xs-12 cols">
         <div class="sides">
           Main
           <p>Using a nested columns</p>
       </div>
       </div>
     </div>
+    <hr>
     Bootstrap resposive site using visibility:
     <div class="row">
       <div class="col-sm-3 sml-block">Always visible</div>
@@ -68,5 +85,105 @@
       <div class="col-sm-3 d-none d-md-inline-block sml-block">Medium and large</div>
       <div class="col-sm-3 d-none d-lg-inline-block sml-block">Only large</div>
     </div>
+      <hr>
+    Image gallery:
+<!--    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="https://picsum.photos/536/354" target="_blank">
+          <h4>Image 1</h4>
+          <img class="img-fluid .img-thumbnail" src="https://picsum.photos/536/354" style="border-radius:50%;" alt="Random Image1">
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="https://picsum.photos/536/354" target="_blank">
+          <h4>Image 2</h4>
+          <img class="img-fluid .img-thumbnail" src="https://picsum.photos/536/355" style="border-radius:50%;" alt="Random Image2">
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="https://picsum.photos/536/354" target="_blank">
+          <h4>Image 3</h4>
+          <img class="img-fluid" src="https://picsum.photos/536/356" style="border-radius:50%;" alt="Random Image3">
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3" style="height:auto;">
+        <a href="https://picsum.photos/536/354" target="_blank">
+          <h4>Image 4</h4>
+          <img src="https://picsum.photos/536/357"  class = "img-fluid" style="border-radius:50%;" alt="Random Image4">
+        </a>
+      </div>
+    </div> -->
+    <hr>
+
+    Blockquote:
+    <blockquote style="background-color:lightyellow">
+      <p>The rich get richer and the poor get poorer, because when it comes to money, the rich are smarter</p>
+      <footer class="blockquote-footer">-Nikith Shetty</footer>
+    </blockquote>
+    <hr>
+
+    Inline list:
+    <ul class="list-inline" style="margin:0px;">
+      <li class="list-inline-item list-block">Home</li>
+      <li class="list-inline-item list-block">Other</li>
+      <li class="list-inline-item list-block">Benz</li>
+      <li class="list-inline-item list-block">Audi</li>
+    </ul>
+    <hr>
+    Image float:
+    <div style="border:solid grey 5px; overflow:auto; ">
+      <figure class="float-right figure">
+        <img class="img-fluid img-thumbnail rounded" style="max-width:450px; height:auto;" src="https://picsum.photos/536/357" alt="Random Image">
+        <figcaption class="figure-caption text-center">A Random Image</figcaption>
+      </figure>
+      <p>Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes. </p>
+    </div>
+    <br>
+    <hr>
+    Table:
+    <table class="table">
+      <thead>
+        <tr class="bg-dark" style="color:white;">
+          <th scope="col">Sr. No.</th>
+          <th scope="col">First</th>
+          <th scope="col">Second</th>
+          <th scope="col">Third</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-info">
+          <td scope="col">1</td>
+          <td scope="col">One</td>
+          <td scope="col">Two</td>
+          <td scope="col">Three</td>
+        </tr>
+        <tr class="bg-warning">
+          <td scope="col">2</td>
+          <td scope="col" colspan="2">Ondhu Eradu</td>
+          <td scope="col">Mooru</td>
+        </tr>
+        <tr class="bg-success">
+          <td scope="col">3</td>
+          <td scope="col">A</td>
+          <td scope="col">B</td>
+          <td scope="col">C</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    Alerts:
+    <div class="alert alert-warning" role="alert">
+      <h3>A random badge<span class="badge badge-primary">Random<span></h3>
+      <p>A link <a href="#">here</a> that leads to nowhere</p>
+    </div>
+    <div class="alert alert-success" role="alert">
+      <button type="button" class="close float-right" data-dismiss="alert" aria-label="Close">x</span></button>
+      <h3>Success!</h3>
+      <hr>
+      <p>You did it, but what?</p>
+    </div>
+    <hr>
+    Buttons:
+
   </body>
 </html>
