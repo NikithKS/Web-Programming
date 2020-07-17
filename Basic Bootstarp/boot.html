@@ -43,11 +43,6 @@
         border-right: solid black 1px;
       }
 
-      @media (max-width:768px){
-
-      }
-
-
     </style>
   </head>
 
@@ -183,7 +178,36 @@
       <p>You did it, but what?</p>
     </div>
     <hr>
+    <div style="display:block;">
     Buttons:
+  </div>
+    <button type="button" class="btn btn-primary btn-lg">Large Primary</button>
+    <button type="button" class="btn btn-outline-warning"> Warning</button>
+    <button type="button" class="btn btn-danger btn-sm">Small Danger</button>
+    <div style="display:block;">
+      Button Group:
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary">Large Primary</button>
+      <button type="button" class="btn btn-outline-danger"> Warning</button>
+      <button type="button" class="btn btn-primary">Small Danger</button>
+    </div>
+
+    <div class="btn-group" style="width:100%;">
+      <button type="button" class="btn btn-primary">But1</button>
+      <button type="button" class="btn btn-primary">But2</button>
+      <div class="btn-group" role="group">
+            <button id="drpdn" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              DRP
+            </button>
+        <div class="dropdown-menu" aria-labelledby="drpdn">
+          <a class="dropdown-item" href="#">Drop link1</a>
+          <a class="dropdown-item" href="#">Drop link2</a>
+          <a class="dropdown-item" href="#">Drop link3</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-bottom:150px;"></div>
 
   </body>
 </html>
