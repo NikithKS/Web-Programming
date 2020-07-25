@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="discription" content="Flask">
+    <meta name="author" content="NiKi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Only HTML</title> -->
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
+    {% block titl %} {% endblock %}
+  </head>
+
+  <body>
+    {% block content %} {% endblock %}
+  </body>
+
+</html>

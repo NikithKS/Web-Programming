@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block titl %}
+  <title>User info</title>
+{% endblock %}
+
+{% block content %}
+    {% if db[id].username == "Niki" %}
+      <h1> Hello <strong>BOSS</strong>, Welcome</h1>
+      <h3> You don't need a ID</h3>
+    {% else %}
+      <h1>Hello User {{ db[id].username }}</h1>
+      <marquee>Your ID is: {{ db[id].ID }}</marquee>
+    {% endif %}
+{% endblock %}
