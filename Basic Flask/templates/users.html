@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 
 {% block titl %}
-  <title>User info</title>
+  <title>New User</title>
 {% endblock %}
 
 {% block content %}
-    {% if db[id].username == "Niki" %}
-      <h1> Hello <strong>BOSS</strong>, Welcome</h1>
-      <h3> You don't need a ID</h3>
-    {% else %}
-      <h1>Hello User {{ db[id].username }}</h1>
-      <marquee>Your ID is: {{ db[id].ID }}</marquee>
-    {% endif %}
+    <h2>New User:</h2>
+    <hr>
+    <form>
+      <label for="Uname">Name:</label>
+      <input type="text" id="Uname" name="name">
+      
+      <label for="about">About:</label>
+      <input type="text" id="about" name="about">
+    </form>
 {% endblock %}
