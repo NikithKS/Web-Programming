@@ -34,8 +34,8 @@ def newuser():
         new_u = userData(name=nm, abt = abt)
         db.session.add(new_u)
         db.session.commit()
-        return redirect('/users')
-    return render_template('users.html')
+        return User inforamtion saved..!
+    return render_template('new.html')
 
 
 @app.route("/<name>")
