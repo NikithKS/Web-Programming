@@ -1,10 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 
 db = SQLAlchemy(app)
 
@@ -22,6 +22,13 @@ class userData(db.Model):
 def namaste():
     return render_template('index.html')
 
+@app.route("/<name>")
+def helloCust(name):
+    if(name == "Nikith"):
+        return "Hello Boss"
+    else:
+        return 'Hello %s!!!' %name
+
 @app.route("/user/<int:uid>")
 def userinfo(uid):
     return render_template('users.html', id = uid, db = usersdb)
@@ -31,19 +38,15 @@ def newuser():
     if request.method == 'POST':
         nm = request.form['name']
         abt = request.form['about']
-        new_u = userData(name=nm, abt = abt)
+        new_u = userData(name=nm, about = abt)
         db.session.add(new_u)
         db.session.commit()
-        return User inforamtion saved..!
-    return render_template('new.html')
-
-
-@app.route("/<name>")
-def helloCust(name):
-    if(name == "Nikith"):
-        return "Hello Boss"
+        return redirect('/new')
     else:
-        return 'Hello %s!!!' %user
+        allU = userData.query.all()
+        return render_template('new.html', users=allU)
+
+
         
 
 
