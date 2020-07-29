@@ -18,3 +18,7 @@ class items(db.Model):
         return 'Task' + str(self.id)
 
 
+@all.route("/")
+def home():
+    
+
