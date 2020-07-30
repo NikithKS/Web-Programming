@@ -5,19 +5,42 @@
 {% endblock  %}
 
 {% block content %}
-    <h3>Unfinished:</h3>
+    <h3><u>Unfinished Tasks</u>:</h3>
+    {% set count = [] %}
     {% for item in data %}
         {% if item.status == 0 %}
-            <h3 class="task-title">{{item.title}}</h3>
-            <div class="task-date">{{item.date.strftime("%d-%m-%Y")}}</div>
-            <div class="task-content">{{item.task}} </div>
+            {% if count.append(1) %} {% endif %}
+           <div class="task-block">
+                <h3 class="task-title">{{item.title}}</h3>
+                <div class="task-date">{{item.date.strftime("%d-%m-%Y")}}</div>
+                <div class="task-content">
+                    <button class="done-button">Done</button>
+                    {{item.task}}  
+                </div>
+               
+            </div>
+            <hr>
         {% endif %}
     {% endfor %}
+    {% if count|length %}
+    {% else %}
+        <h3 class="empty">Empty</h3>
+        <hr>
+    {% endif %}
 
-    <h3>Finished:</h3>
+    <h3><u>Finished Tasks</u>:</h3>
+    {% set count = [] %}
     {% for item in data %}
         {% if item.status == 1 %}
-            <h3 class="task-done>{{item.title}}</h3>
+            {% if count.append(1) %} {% endif %}
+            <h3 class="task-done">{{item.title}}</h3>
         {% endif %}
     {% endfor %}
+    {% if count|length %}
+    {% else %}
+         <h3 class="empty">Empty</h3>
+        <hr>
+    {% endif %}
+
+    <button class="addnew-button">+</button>
 {% endblock  %}
