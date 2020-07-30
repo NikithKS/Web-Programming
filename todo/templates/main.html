@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titl %}
+    <title>To-Do</title>
+{% endblock  %}
+
+{% block content %}
+    <h3>Unfinished:</h3>
+    {% for item in data %}
+        {% if item.status == 0 %}
+            <h3 class="task-title">{{item.title}}</h3>
+            <div class="task-date">{{item.date.strftime("%d-%m-%Y")}}</div>
+            <div class="task-content">{{item.task}} </div>
+        {% endif %}
+    {% endfor %}
+
+    <h3>Finished:</h3>
+    {% for item in data %}
+        {% if item.status == 1 %}
+            <h3 class="task-done>{{item.title}}</h3>
+        {% endif %}
+    {% endfor %}
+{% endblock  %}
