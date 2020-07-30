@@ -11,11 +11,11 @@
         {% if item.status == 0 %}
             {% if count.append(1) %} {% endif %}
            <div class="task-block">
-                <h3 class="task-title">{{item.title}}</h3>
+                <a class="task-title" href="/edit/{{item.id}}">{{item.title}}</a>
                 <div class="task-date">{{item.date.strftime("%d-%m-%Y")}}</div>
-                <div class="task-content">
-                    <button class="done-button">Done</button>
+                <a class="task-content" href="/edit/{{item.id}}">
                     {{item.task}}  
+                    <button class="done-button">Done</button>
                 </div>
                
             </div>

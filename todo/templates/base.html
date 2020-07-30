@@ -10,15 +10,22 @@
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
     {% block titl %} {% endblock %}
     <style>
-
       .title-block{
           display: block;
           background-color: lightseagreen;
-          text-align: center;
           font: bolder;
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           height: 15%;
           margin: 0;
+          padding-top: auto;
+          padding-bottom: auto;
+          position: relative;
+      }
+
+      .title-content {
+        position: absolute;
+        top: 50%;
+        text-align: center;
       }
 
       .task-block{
@@ -32,10 +39,14 @@
 
       .task-title {
         display: inline;
+        color: black;
         font: bolder;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: x-large;
         margin-left: 0;
+        text-decoration: none;
       }
+
       .task-date{
         display: inline;
         font: bolder;
@@ -49,7 +60,8 @@
       .task-content {
         color: darkslategray;
         display: block;
-        margin-top: 15px;;
+        text-decoration: none;
+        margin-top: 15px;
       }
 
       .done-button {
@@ -62,7 +74,7 @@
         background-color: cornflowerblue;
         position: fixed;
         bottom: 20px;
-        right: 20px;
+        left: auto;
         border-radius: 50%;
         color: lightgoldenrodyellow;
         font: bolder;
@@ -75,12 +87,20 @@
       .addnew-button:hover {
         background-color: darkturquoise;
       }
+
+      @media (min-width: 600px){
+        body{
+          padding-left:15% ;
+          padding-right:15% ;
+          height: 1000px;
+        }
+      }
     </style>
   </head>
 
   <body>
     <div class = "title-block">
-        <h1>TO-DO List</h1>
+        <h1 class="title-content">TO-DO List</h1>
     </div>
     {% block content %} {% endblock %}
   </body>

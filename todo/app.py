@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template
+from flask import Flask, redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -25,7 +25,7 @@ def home():
     content = items.query.all()
     return render_template('main.html', data = content[::-1])
 
-@app.route("/new", methods = ['POST'])
+@app.route("/new", methods = ["GET", "POST"])
 def addnew():
     if request.method == 'POST':
         pass
@@ -33,11 +33,12 @@ def addnew():
         return render_template('new.html')
 
 
-@app.route("/edit/<int:current_id>", methods = ["POST"])
+@app.route("/edit/<int:current_id>", methods = ["GET","POST"])
 def edit(current_id):
     if request.method == 'POST':
-        pass
+        pass 
     else:
+        # todo: query for id
         info = items.query.all()[current_id]
         return render_template('editor.html', item = info)
 
