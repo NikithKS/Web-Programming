@@ -11,20 +11,21 @@
         {% if item.status == 0 %}
             {% if count.append(1) %} {% endif %}
            <div class="task-block">
-                <a class="task-title" href="/edit/{{item.id}}">{{item.title}}</a>
-                <div class="task-date">{{item.date.strftime("%d-%m-%Y")}}</div>
-                <a class="task-content" href="/edit/{{item.id}}">
-                    {{item.task}}  
-                    <button class="done-button">Done</button>
+               <div class="task-date">{{item.date.strftime("%d-%m-%Y")}}</div>
+               <a class="task-title" href="/edit/{{item.id}}">{{item.title}}</a>
+               <br>
+               <a class="task-content" href="/edit/{{item.id}}">
+                    {{item.task}}
+                </a>
+            <a class="done-button" href="/done/{{item.id}}">Done</a>
                 </div>
-               
             </div>
             <hr>
         {% endif %}
     {% endfor %}
     {% if count|length %}
     {% else %}
-        <h3 class="empty">Empty</h3>
+        <h3 class="empty">---Empty---</h3>
         <hr>
     {% endif %}
 
@@ -33,14 +34,14 @@
     {% for item in data %}
         {% if item.status == 1 %}
             {% if count.append(1) %} {% endif %}
-            <h3 class="task-done">{{item.title}}</h3>
+            <h3 class="task-done"><strike>{{item.title}}</strike></h3>
         {% endif %}
     {% endfor %}
     {% if count|length %}
     {% else %}
-         <h3 class="empty">Empty</h3>
+         <h3 class="empty">---Empty---</h3>
         <hr>
     {% endif %}
 
-    <button class="addnew-button">+</button>
+    <a class="addnew-button" href="/new">+</a>
 {% endblock  %}

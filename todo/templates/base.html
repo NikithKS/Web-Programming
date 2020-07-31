@@ -7,7 +7,7 @@
     <meta name="author" content="NiKi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <title>Only HTML</title> -->
-    <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}"> -->
     {% block titl %} {% endblock %}
     <style>
       .title-block{
@@ -15,11 +15,12 @@
           background-color: lightseagreen;
           font: bolder;
           font-family: Verdana, Geneva, Tahoma, sans-serif;
+          text-align: center;
           height: 15%;
           margin: 0;
           padding-top: auto;
           padding-bottom: auto;
-          position: relative;
+          /* position: relative; */
       }
 
       .title-content {
@@ -38,13 +39,14 @@
       }
 
       .task-title {
-        display: inline;
+        display: inline-block;
         color: black;
         font: bolder;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: x-large;
         margin-left: 0;
         text-decoration: none;
+        margin-bottom: 15px;
       }
 
       .task-date{
@@ -59,18 +61,31 @@
 
       .task-content {
         color: darkslategray;
-        display: block;
+        display: inline;
         text-decoration: none;
-        margin-top: 15px;
       }
 
       .done-button {
+        display: inline-block;
+        text-align:center;
+        text-decoration: none;
+        color: black;
+        width: 75px;
+        height: 22px;
         background-color: teal;
         display: inline;
         float: right;
+        border: solid 2px silver;
+        border-radius: 5px;
+      }
+
+      .done-button:hover {
+        background-color:mediumspringgreen;
+        border-bottom: solid 2px teal;
       }
 
       .addnew-button {
+        text-decoration: none;
         background-color: cornflowerblue;
         position: fixed;
         bottom: 20px;
@@ -88,6 +103,17 @@
         background-color: darkturquoise;
       }
 
+      .input-feild {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .empty {
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      
       @media (min-width: 600px){
         body{
           padding-left:15% ;
@@ -95,12 +121,14 @@
           height: 1000px;
         }
       }
+
+
     </style>
   </head>
 
   <body>
     <div class = "title-block">
-        <h1 class="title-content">TO-DO List</h1>
+        <h1>TO-DO List</h1>
     </div>
     {% block content %} {% endblock %}
   </body>

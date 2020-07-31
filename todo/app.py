@@ -28,20 +28,37 @@ def home():
 @app.route("/new", methods = ["GET", "POST"])
 def addnew():
     if request.method == 'POST':
-        pass
+        t = request.form['titl']
+        d = request.form['desc']
+        newItem = items(title = t, task = d)
+        db.session.add(newItem)
+        db.session.commit()
+        return redirect('/')
     else:
         return render_template('new.html')
 
 
 @app.route("/edit/<int:current_id>", methods = ["GET","POST"])
 def edit(current_id):
+    curItem = items.query.get(current_id)
     if request.method == 'POST':
-        pass 
+        curItem.title = request.form['titl']
+        curItem.task = request.form['desc']
+        db.session.commit()
+        return redirect('/')
+
     else:
         # todo: query for id
-        info = items.query.all()[current_id]
+        info = items.query.get(current_id)
         return render_template('editor.html', item = info)
 
+
+@app.route("/done/<int:current_id>")
+def markDone(current_id):
+    curItem = items.query.get(current_id)
+    curItem.status = 1
+    db.session.commit()
+    return redirect('/')
 
 if __name__ == "__main__":
     app.run(debug = True)

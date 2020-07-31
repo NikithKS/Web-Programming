@@ -3,11 +3,17 @@
 {% block titl %}
     <title>{{item.title}}</title>
 {% endblock  %}
-    <form>
-        <lable for="titl">Title</lable>
-        <input type="text" id="titl" name="titl">
-        
-        <label for="desc">Task</label>
-        <input type="text" id="desc" name="desc">
-    </form>
+
 {% block content %}
+<h2><u>EDIT:</u></h2>
+
+<form action="/edit/{{item.id}}" method="POST">
+    <lable for="titl"><h3>Title:</h3></lable>
+    <input class="input-feild" id="titl" type="text" id="titl" name="titl" value={{ item.title }}>
+    
+    <label for="desc"><h3>Task:</h3></label>
+    <input class="input-feild" id="desc" type="text" id="desc" name="desc" value={{item.task}}>
+
+    <input type="submit" value="Save">
+</form>
+{% endblock %}
