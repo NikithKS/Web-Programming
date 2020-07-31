@@ -9,10 +9,10 @@
 
 <form action="/edit/{{item.id}}" method="POST">
     <lable for="titl"><h3>Title:</h3></lable>
-    <input class="input-feild" id="titl" type="text" id="titl" name="titl" value={{ item.title }}>
+    <input class="input-feild" id="titl" type="text" id="titl" name="titl" value={{ item.title|tojson }}>
     
     <label for="desc"><h3>Task:</h3></label>
-    <input class="input-feild" id="desc" type="text" id="desc" name="desc" value={{item.task}}>
+    <input class="input-feild" id="desc" type="text" id="desc" name="desc" value={{ item.task|tojson }}>
 
     <input type="submit" value="Save">
 </form>

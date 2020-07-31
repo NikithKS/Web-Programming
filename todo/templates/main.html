@@ -20,7 +20,7 @@
             <a class="done-button" href="/done/{{item.id}}">Done</a>
                 </div>
             </div>
-            <hr>
+            <!-- <hr> -->
         {% endif %}
     {% endfor %}
     {% if count|length %}
@@ -29,7 +29,7 @@
         <hr>
     {% endif %}
 
-    <h3><u>Finished Tasks</u>:</h3>
+    <h3 style="margin-top: 15px;"><u>Finished Tasks</u>:</h3>
     {% set count = [] %}
     {% for item in data %}
         {% if item.status == 1 %}
