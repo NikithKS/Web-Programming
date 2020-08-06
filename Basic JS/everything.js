@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", ready);
+
 function ready() {
     console.log("Ready");
     // document.addEventListener("offline",function () {alert("Disconnected");});
@@ -13,7 +15,6 @@ function ready() {
     image1.addEventListener("mouseout",function() {tempAlert('Mouseoff...', 2000)});
 }
 
-document.addEventListener("DOMContentLoaded", ready);
 
 function loaded(){
     document.getElementById("thats-onload").innerHTML = "Image Loaded.(onload event)";
