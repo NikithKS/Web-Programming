@@ -1,0 +1,31 @@
+#big-box {
+  border: 20px solid grey;
+  display: inline-block; }
+
+#inner-box {
+  height: 150px;
+  width: 150px;
+  background-color: skyblue;
+  transition: transform 600ms cubic-bezier(0, -0.66, 1, 1); }
+
+#big-box:hover #inner-box {
+  transform: translate(100%, 100%) rotate(180deg); }
+
+.name-box {
+  border: 5px solid grey;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px; }
+
+.name-char {
+  display: inline-block;
+  transition: transform 600ms cubic-bezier(0, -0.66, 1, 1); }
+
+.test {
+  display: inline-block;
+  border: solid black 2px;
+  color: #000;
+  transform: rotate(60deg); }
+
+/*# sourceMappingURL=styles.css.map */
