@@ -1,72 +1,89 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>CSS3 animations</title>
-        <meta>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-        <script src="jquery.js"></script>
-        <script src="main.js"></script>
-        <link href="styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="big-box">
-            <div id="inner-box"></div>
-        </div>
+  <head>
+    <title>CSS3 animations</title>
+    <meta />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="big-box">
+      <div id="inner-box"></div>
+    </div>
 
-        <div class="name-box" onmouseover ="effect()" onmouseout="removeEffect()">
-            <h1 class="name-char">N</h1>
-            <h1 class="name-char">I</h1>
-            <h1 class="name-char">K</h1>
-            <h1 class="name-char">I</h1>
-            <h1 class="name-char">T</h1>
-            <h1 class="name-char">H</h1>
-            <h1 class="name-char"><pre> </pre></h1>
-            <h1 class="name-char">K</h1>
-            <h1 class="name-char">U</h1>
-            <h1 class="name-char">M</h1>
-            <h1 class="name-char">A</h1>
-            <h1 class="name-char">R</h1>
-            <h1 class="name-char"><pre> </pre></h1>
-            <h1 class="name-char">S</h1>
-            <h1 class="name-char">H</h1>
-            <h1 class="name-char">E</h1>
-            <h1 class="name-char">T</h1>
-            <h1 class="name-char">T</h1>
-            <h1 class="name-char">Y</h1>
-            <div class="grower g1"></div>
-            <div class="grower g2"></div>
-            <div class="grower g3"></div>
-            <div class="grower g4"></div>
-        </div>
-        <div class="pink-box"></div>
-        <hr>
-        <nav class="navbar">
-            <div class="logo">NAV</div>
-            <div class="head1">Head1
-                <ul class="list1">
-                    <li>Item1</li>
-                    <li>Item2</li>
-                    <li>Item3</li>
-                    <li>Item4</li>
-                </ul>
-            </div>
-            <div class="head2">Head2
-                <ul class="list2">
-                    <li>Item1</li>
-                    <li>Item2</li>
-                    <li>Item3</li>
-                    <li>Item4</li>
-                </ul>
-            </div>
-            <div class="head3">Head3
-                <ul class="list3">
-                    <li>Item1</li>
-                    <li>Item2</li>
-                    <li>Item3</li>
-                    <li>Item4</li>
-                </ul>
-            </div>
-        </nav>
-    </body>
+    <div class="name-box" onmouseover="effect()" onmouseout="removeEffect()">
+      <h1 class="name-char">N</h1>
+      <h1 class="name-char">I</h1>
+      <h1 class="name-char">K</h1>
+      <h1 class="name-char">I</h1>
+      <h1 class="name-char">T</h1>
+      <h1 class="name-char">H</h1>
+      <h1 class="name-char"><pre></pre></h1>
+      <h1 class="name-char">K</h1>
+      <h1 class="name-char">U</h1>
+      <h1 class="name-char">M</h1>
+      <h1 class="name-char">A</h1>
+      <h1 class="name-char">R</h1>
+      <h1 class="name-char"><pre></pre></h1>
+      <h1 class="name-char">S</h1>
+      <h1 class="name-char">H</h1>
+      <h1 class="name-char">E</h1>
+      <h1 class="name-char">T</h1>
+      <h1 class="name-char">T</h1>
+      <h1 class="name-char">Y</h1>
+      <div class="grower g1"></div>
+      <div class="grower g2"></div>
+      <div class="grower g3"></div>
+      <div class="grower g4"></div>
+    </div>
+    <div class="pink-box"></div>
+    <hr />
+    <div class="navbar">
+        <div class="logo">NAV</div>
+      <div class="drops">
+        <ul class="menu">
+          <div class="head1">HEAD 1</div>
+          <div class="lii">
+            <li class="item1">ITEM 1</li>
+            <li class="item1">ITEM 2</li>
+            <li class="item1">ITEM 3</li>
+            <li class="item1">ITEM 4</li>
+          </div>
+        </ul>
+
+        <ul class="menu">
+          <div class="head1">HEAD 2</div>
+          <div class="lii">
+            <li class="item1">ITEM 1</li>
+            <li class="item1">ITEM 2</li>
+            <li class="item1">ITEM 3</li>
+            <li class="item1">
+                 <ul class="menu">
+          <div class="head1">HEAD 2</div>
+          <div class="lii">
+            <li class="item1">ITEM 1</li>
+            <li class="item1">ITEM 2</li>
+            <li class="item1">ITEM 3</li>
+            <li class="item1">ITEM 4</li>
+          </div>
+        </ul>
+            </li>
+          </div>
+        </ul>
+
+        <ul class="menu">
+          <div class="head1">HEAD 3</div>
+          <div class="lii">
+            <li class="item1">ITEM 1</li>
+            <li class="item1">ITEM 2</li>
+            <li class="item1">ITEM 3</li>
+            <li class="item1">ITEM 4</li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>

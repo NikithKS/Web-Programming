@@ -93,35 +93,61 @@
   100% {
     height: 50%;
     width: 50%; } }
-.navbar {
-  display: flex;
-  align-items: center;
-  background-color: #085a5a;
-  color: #e9e5e5;
-  min-height: 35px; }
-
 .logo {
-  letter-spacing: 5px;
-  flex-grow: 4;
-  padding-left: 7%; }
-
-.head1, .head2, .head3 {
+  width: 20%;
   display: flex;
-  flex: auto;
-  height: 100%;
   align-items: center;
   justify-content: center;
-  position: absolute; }
-  .head1 .list1, .head1 .list2, .head1 .list3, .head2 .list1, .head2 .list2, .head2 .list3, .head3 .list1, .head3 .list2, .head3 .list3 {
-    position: absolute;
-    margin-top: 35px;
-    list-style: none;
-    display: none; }
-    .head1 .list1 li, .head1 .list2 li, .head1 .list3 li, .head2 .list1 li, .head2 .list2 li, .head2 .list3 li, .head3 .list1 li, .head3 .list2 li, .head3 .list3 li {
-      display: block; }
-  .head1:hover, .head2:hover, .head3:hover {
-    background-color: #053838; }
-    .head1:hover .list1, .head1:hover .list2, .head1:hover .list3, .head2:hover .list1, .head2:hover .list2, .head2:hover .list3, .head3:hover .list1, .head3:hover .list2, .head3:hover .list3 {
-      display: block; }
+  letter-spacing: 5px;
+  min-height: 35px; }
+
+.navbar {
+  width: 100%;
+  background-color: skyblue;
+  padding: 0;
+  display: flex;
+  justify-content: space-between; }
+
+.menu {
+  display: inline-block;
+  margin: 0; }
+  .menu li {
+    list-style-type: none;
+    padding: 10px 20px;
+    height: 25px;
+    background-color: #085a5a;
+    color: #dddddd; }
+  .menu:hover .item1 {
+    display: block;
+    opacity: 0;
+    animation: mykf 0.5s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; }
+  .menu:hover .lii {
+    position: absolute; }
+  .menu:hover .head1 {
+    background-color: black; }
+
+.head1 {
+  padding: 10px 20px;
+  height: 25px; }
+
+.item1 {
+  text-align: center;
+  margin: 0;
+  display: none; }
+  .item1:hover {
+    background-color: #30328c; }
+
+body {
+  height: 5000px; }
+
+@keyframes mykf {
+  0% {
+    opacity: 0;
+    transform: translate(20px, 20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0, 0); } }
 
 /*# sourceMappingURL=styles.css.map */
