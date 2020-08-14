@@ -1,12 +1,20 @@
+let isJumbled = False
 function effect() {
     let chars = $('.name-char');
     for( let i = 0; i < chars.length; i++){
-        slant(chars.eq(i));
+        let angle = (Math.random() * 100) - 50;
+        slant(chars.eq(i), angle);
     }
 }
 
-function slant(element) {
-    let angle = (Math.random() * 60) - 30;
-    let cmd = 'rotate(' + angle + 'deg) scale(1.25)';
-    element.css('transform', cmd);       
+function removeEffect() {
+    let chars = $('.name-char');
+    for( let i = 0; i < chars.length; i++){
+        slant(chars.eq(i), 0);
+    }
 }
+
+function slant(element, angle) {
+    element.css('transform', `rotate(${angle}deg)`);       
+}
+

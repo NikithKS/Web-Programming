@@ -6,10 +6,11 @@
     height: 150px
     width: 150px
     background-color: skyblue
+    transform-origin: 100% 0%
     transition: transform 600ms cubic-bezier(0,-0.66,1,1)
 
 #big-box:hover #inner-box
-    transform: translate(100% ,100%) rotate(180deg)
+    transform:  rotate(360deg)
 
 .name-box
     border: 5px solid grey    
@@ -17,14 +18,121 @@
     margin-left: auto
     margin-right: auto
     padding: 10px
+    position: relative
+
+    &:hover  .grower
+        animation: grow
+        animation-duration: 0.5s
+        animation-timing-function: cubic-bezier(0,.72,.97,.93)
+        animation-delay: 0s
+        animation-iteration-count: 1
+        animation-direction: alternate
+        animation-fill-mode: forwards
+
 
 .name-char
     display: inline-block
     // transition: transform 1s linear
-    transition: transform 600ms cubic-bezier(0,-0.66,1,1)
+    transition: transform 0.5s cubic-bezier(0,-0.66,1,1)
+    pointer-events: none
+    z-index: 2
+
+.grower
+    background-color: lightskyblue
+    position: absolute
+    width: 0%
+    height: 0%
+    pointer-events: none
+
+.g1
+    top: 0
+    left: 0
+
+.g2
+    top: 0
+    right: 0
+
+.g3
+    bottom: 0
+    left: 0
+
+.g4
+    bottom: 0
+    right: 0
     
 .test
     display: inline-block
     border: solid black 2px
-    color: #000
+    color: blue
+    transform-origin: top left
     transform: rotate(60deg)
+
+.pink-box
+    height: 150px
+    width: 150px
+    background-color: pink
+    // animation: myframes
+    // animation-duration: 1s
+    // animation-iteration-count: infinite
+    &:hover
+        animation: myframes
+        animation-duration: 1s
+        animation-timing-function: linear
+        animation-delay: 0s
+        animation-iteration-count: infinite
+        animation-direction: alternate
+        animation-fill-mode: forwards
+
+@keyframes myframes
+    0%
+        height: 150px
+        width: 150px
+    0% ,70%
+        width: 150px
+    100%
+        height: 400px
+        width: 100%
+
+@keyframes grow
+    0%
+        height: 0
+        width: 0
+    100%
+        height: 50%
+        width: 50%
+
+
+.navbar
+    display: flex
+    align-items: center
+    background-color: rgb(8, 90, 90)
+    color: rgb(233, 229, 229)
+    min-height: 35px
+
+.logo
+    letter-spacing: 5px
+    flex-grow: 4
+    padding-left: 7%
+
+.head1, .head2, .head3
+    display: flex
+    flex: auto
+    height: 100%
+    align-items: center
+    justify-content: center
+    position: absolute
+
+    .list1, .list2, .list3
+        position: absolute
+        margin-top: 35px 
+        list-style: none
+        display: none
+        li
+            display: block
+    
+    &:hover
+        background-color: #053838
+        .list1, .list2, .list3
+            display: block
+
+
