@@ -117,16 +117,46 @@
     height: 25px;
     background-color: #085a5a;
     color: #dddddd; }
-  .menu:hover .item1 {
-    display: block;
-    opacity: 0;
-    animation: mykf 0.5s linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; }
   .menu:hover .lii {
     position: absolute; }
+  .menu:hover .item1:nth-child(1) {
+    display: block;
+    opacity: 0;
+    animation: mykf 0.2s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0ms;
+    border-bottom: solid 1px slategrey; }
+  .menu:hover .item1:nth-child(2) {
+    display: block;
+    opacity: 0;
+    animation: mykf 0.2s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 100ms;
+    border-bottom: solid 1px slategrey; }
+  .menu:hover .item1:nth-child(3) {
+    display: block;
+    opacity: 0;
+    animation: mykf 0.2s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 200ms;
+    border-bottom: solid 1px slategrey; }
+  .menu:hover .item1:nth-child(4) {
+    display: block;
+    opacity: 0;
+    animation: mykf 0.2s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 300ms;
+    border-bottom: solid 1px slategrey; }
   .menu:hover .head1 {
-    background-color: black; }
+    background-color: black;
+    color: #eee; }
+
+.lii {
+  perspective: 1000px; }
 
 .head1 {
   padding: 10px 20px;
@@ -145,9 +175,75 @@ body {
 @keyframes mykf {
   0% {
     opacity: 0;
-    transform: translate(20px, 20px); }
+    transform: rotateY(180deg); }
   100% {
     opacity: 1;
-    transform: translateY(0, 0); } }
+    transform: rotateY(0deg); } }
+.flag-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  overflow: hidden;
+  position: relative; }
+  .flag-block:hover {
+    display: block; }
+    .flag-block:hover .placehold {
+      display: none; }
+    .flag-block:hover .top {
+      width: 600px;
+      animation: right-left 1s linear forwards; }
+    .flag-block:hover .mid {
+      width: 600px; }
+    .flag-block:hover .bottom {
+      width: 600px;
+      animation: left-right 1s linear forwards; }
+    .flag-block:hover .top h3, .flag-block:hover .mid h3, .flag-block:hover .bottom h3 {
+      animation: fade-in 0.6s linear forwards;
+      animation-delay: 1s; }
+
+.placehold {
+  display: block;
+  position: absolute;
+  font-family: "Lora", serif;
+  font-size: 50px;
+  font-style: bolder; }
+
+.top, .mid, .bottom {
+  display: flex;
+  width: 0%;
+  height: 50px;
+  font-family: "Lora", serif;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center; }
+  .top h3, .mid h3, .bottom h3 {
+    opacity: 0; }
+
+.top {
+  background-color: orange; }
+
+.bottom {
+  background-color: green; }
+
+@keyframes right-left {
+  0% {
+    transform: translate(600px); }
+  100% {
+    transform: translate(0px); } }
+@keyframes left-right {
+  0% {
+    transform: translate(-600px); }
+  100% {
+    transform: translate(0px); } }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=styles.css.map */
