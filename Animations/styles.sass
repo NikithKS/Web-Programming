@@ -248,7 +248,129 @@ body
         transform: translate(0px)
 
 @keyframes fade-in
+
     0%
         opacity: 0
     100%
         opacity: 1
+
+.border-box
+    height: 200px
+    width: 100%
+    background-color: #c23636
+    display: flex
+    justify-content: center
+    align-items: center
+
+        
+
+.border-content
+    font-size: 50px
+    padding: 50px
+    color: white
+    position: relative
+
+    &:before, &::after
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        border: 5px solid transparent
+        // border-radius: 5px
+    &:before
+        // bottom: -2px
+        top: 0px
+        left: 0px
+    &:after
+        bottom: 0px
+        right: 0px
+        
+    &:hover
+        &:before
+            animation: bord-tl 1s linear forwards
+        
+        &:after
+            animation: bord-br 1s linear forwards
+
+
+@keyframes bord-tl
+    0%
+        border-top-color: #fff
+        border-left-color: #fff
+        width: 0%
+        height: 0%    
+    100%
+        border-top-color: #fff
+        border-left-color: #fff
+        width: 100%
+        height: 100%
+
+@keyframes bord-br
+    0%
+        border-bottom-color: #fff
+        border-right-color: #fff
+        width: 0%
+        height: 0%    
+    100%
+        border-bottom-color: #fff
+        border-right-color: #fff
+        width: 100%
+        height: 100%
+
+
+.skew-body
+    height: 300px
+    width: 100%
+    position: relative
+    border: 2px solid black
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .skew-red, .skew-blue
+        position: absolute
+        height: 150px
+        width: 250px
+        opacity: 0.5
+
+    .skew-red
+        background-color: #770c2e 
+        animation: lr 6s cubic-bezier(.9,.26,.05,.9) alternate infinite
+        // transform: skew(30deg)
+
+    .skew-blue
+        background-color: #066156 
+        animation: rl 6s cubic-bezier(.96,.46,.45,.8) alternate infinite
+        // transform: skew(-30deg)
+    .skew-content
+        position: absolute
+        width: 200px
+        height: 100px
+        background-color: #fff 
+
+$xdeg : 5deg
+$ydeg : 7deg
+
+$x2deg : -5deg
+$y2deg : -7deg
+
+@keyframes lr
+    0%
+        transform: skew($xdeg, $ydeg)
+
+    50%        
+        transform: skew($x2deg, $y2deg)
+
+    100%
+        transform: skew($xdeg, $ydeg)
+        
+
+@keyframes rl
+    0%
+        transform: skew($x2deg, $y2deg)
+
+    50%        
+        transform: skew($xdeg, $ydeg)
+
+    100%
+        transform: skew($x2deg, $y2deg)
