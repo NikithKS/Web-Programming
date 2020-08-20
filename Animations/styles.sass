@@ -326,6 +326,7 @@ body
     display: flex
     justify-content: center
     align-items: center
+    background-color: #ccc
 
     .skew-red, .skew-blue
         position: absolute
@@ -333,26 +334,33 @@ body
         width: 250px
         opacity: 0.5
 
+    .skew-black
+        opacity: 1
     .skew-red
-        background-color: #770c2e 
-        animation: lr 6s cubic-bezier(.9,.26,.05,.9) alternate infinite
-        // transform: skew(30deg)
+        background-color: red
+        // animation: lr 6s cubic-bezier(.49,.15,.51,.78) alternate infinite
 
     .skew-blue
-        background-color: #066156 
-        animation: rl 6s cubic-bezier(.96,.46,.45,.8) alternate infinite
-        // transform: skew(-30deg)
+        background-color: blue
+        // animation: rl 6s cubic-bezier(.49,.15,.51,.78) alternate infinite
     .skew-content
         position: absolute
-        width: 200px
-        height: 100px
+        width: 220px
+        height: 110px
         background-color: #fff 
 
-$xdeg : 5deg
-$ydeg : 7deg
+    &:hover
+        .skew-red
+            animation: lr 9s cubic-bezier(.49,.15,.21,.78) alternate infinite 
+        .skew-blue
+            animation: rl 9s cubic-bezier(.49,.15,.21,.78) alternate infinite
 
+
+$xdeg : 5deg
+$ydeg : 5deg
 $x2deg : -5deg
-$y2deg : -7deg
+$y2deg : -5deg
+
 
 @keyframes lr
     0%

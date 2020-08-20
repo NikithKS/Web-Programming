@@ -304,37 +304,42 @@ body {
   border: 2px solid black;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-color: #ccc; }
   .skew-body .skew-red, .skew-body .skew-blue {
     position: absolute;
     height: 150px;
     width: 250px;
     opacity: 0.5; }
+  .skew-body .skew-black {
+    opacity: 1; }
   .skew-body .skew-red {
-    background-color: #770c2e;
-    animation: lr 6s cubic-bezier(0.9, 0.26, 0.05, 0.9) alternate infinite; }
+    background-color: red; }
   .skew-body .skew-blue {
-    background-color: #066156;
-    animation: rl 6s cubic-bezier(0.96, 0.46, 0.45, 0.8) alternate infinite; }
+    background-color: blue; }
   .skew-body .skew-content {
     position: absolute;
-    width: 200px;
-    height: 100px;
+    width: 220px;
+    height: 110px;
     background-color: #fff; }
+  .skew-body:hover .skew-red {
+    animation: lr 9s cubic-bezier(0.49, 0.15, 0.21, 0.78) alternate infinite; }
+  .skew-body:hover .skew-blue {
+    animation: rl 9s cubic-bezier(0.49, 0.15, 0.21, 0.78) alternate infinite; }
 
 @keyframes lr {
   0% {
-    transform: skew(5deg, 7deg); }
+    transform: skew(5deg, 5deg); }
   50% {
-    transform: skew(-5deg, -7deg); }
+    transform: skew(-5deg, -5deg); }
   100% {
-    transform: skew(5deg, 7deg); } }
+    transform: skew(5deg, 5deg); } }
 @keyframes rl {
   0% {
-    transform: skew(-5deg, -7deg); }
+    transform: skew(-5deg, -5deg); }
   50% {
-    transform: skew(5deg, 7deg); }
+    transform: skew(5deg, 5deg); }
   100% {
-    transform: skew(-5deg, -7deg); } }
+    transform: skew(-5deg, -5deg); } }
 
 /*# sourceMappingURL=styles.css.map */
