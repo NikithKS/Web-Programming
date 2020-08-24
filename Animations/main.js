@@ -1,4 +1,4 @@
-let isJumbled = False
+let isJumbled = false
 function effect() {
     let chars = $('.name-char');
     for( let i = 0; i < chars.length; i++){
@@ -18,3 +18,15 @@ function slant(element, angle) {
     element.css('transform', `rotate(${angle}deg)`);       
 }
 
+let callback = (entries, observer) => {
+    entries.forEach(entry =>{
+        console.log("VISIBLE");
+    });
+};
+let options = {
+    threshold : 0.1
+}
+let observer = new IntersectionObserver(callback, options);
+
+let skewEle = document.getElementById('skew-body');
+observer.observe(skewEle);
