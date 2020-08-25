@@ -23,10 +23,15 @@ let callback = (entries, observer) => {
         console.log("VISIBLE");
     });
 };
+
 let options = {
-    threshold : 0.1
+    root: document.querySelector('#scrollArea'),
+    threshold : 0.5 
 }
 let observer = new IntersectionObserver(callback, options);
 
-let skewEle = document.getElementById('skew-body');
-observer.observe(skewEle);
+
+window.onload = function(){
+    let skewEle = document.getElementById('skew-body');
+    observer.observe(skewEle);
+}
